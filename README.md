@@ -32,6 +32,6 @@ A pesar de no contar con un conjunto de datos ideal, se logró implementar un al
 Estos resultados indican que el modelo identifica correctamente a la mayoría de los sobrevivientes reales (alta sensibilidad), aunque a costa de generar cierta cantidad de falsos positivos (precisión más moderada), un comportamiento esperable dado el desbalance de clases presente en el dataset del Titanic.
 
 ### Set de datos 
-*Nombre del dataset:* Titanic
-*Enlace:* https://www.kaggle.com/datasets/heptapod/titanic/data
-*Tipo de licencia:* CC0, open database
+-*Nombre del dataset:* Titanic
+-*Enlace:* https://www.kaggle.com/datasets/heptapod/titanic/data
+-*Tipo de licencia:* CC0, open database
