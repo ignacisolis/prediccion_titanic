@@ -14,7 +14,7 @@ A través de la biblioteca **scikit-learn** se optó, en primera instancia, por 
 
 Para mejorar el desempeño del modelo se implementaron las siguientes técnicas:
 
-- **Ingeniería de variables**: extracción del título (Mr., Mrs., Miss, Master) a partir del nombre, cálculo del tamaño familiar (`FamilySize = SibSp + Parch + 1`) y creación de la variable `IsAlone`.
+- **Ingeniería de variables**: 
 - **Balanceo de clases**: uso de `class_weight='balanced'` en el Random Forest para compensar el desbalance entre sobrevivientes y no sobrevivientes.
 - **Optimización de hiperparámetros**: búsqueda de los mejores parámetros (`n_estimators`, `max_depth`, `min_samples_leaf`, entre otros) mediante `GridSearchCV`/`RandomizedSearchCV`.
 
