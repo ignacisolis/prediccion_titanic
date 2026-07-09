@@ -1,14 +1,32 @@
-# Predicción de la supervivencia en el accidente del titanic
-### Problematica 
-Es bien sabido que en el accidente del titanic las mujeres y los niños eran los que tenian mayor probabilidades de salvarse, pero después de ellos ¿quienes le siguen?
+# Predicción de la supervivencia en el accidente del Titanic
 
-### Aplicaciones y algoritmos 
-A través del lenguaje de programación de python se realizó un analisis de datos para ver qué variables pueden estar involucradas para saber quien se puede salvar de este accidente
-para esto se utilizó pandas, maptplotlib y seaborn con la finalidad de analizar y comprender cuales eran las variables que estaban estrechamente relacionadas con la supervivencia.
+## Problemática
 
-### Aprendizaje 
-Através de la biblioteca de skitlearn se opto por utilizar la regresion logistica en primera instancia, una vez se comprueba que no es el mejor modelo (dado a que los resultados no eran muy satisfactorios) 
-se decantó por utilizar randomforest por su capacidad de capturar relaciones no lineales.
+Es bien sabido que en el accidente del Titanic las mujeres y los niños eran quienes tenían mayores probabilidades de salvarse. Pero, después de ellos, ¿quiénes le siguen? Este proyecto busca identificar qué otras variables influyeron en la supervivencia de los pasajeros.
 
-Finalmente se concluye que a pesar de no tener un buen set de datos se logro implementar un algoritmo con hiperparametros lo suficientemente correctos para poder tener un aprendizaje correcto
-encontrando una presicion del 70%, una  exactitud del 76%, f1_score del 61% y 
+## Análisis de datos
+
+A través del lenguaje de programación Python se realizó un análisis exploratorio de datos para identificar qué variables podían estar relacionadas con la supervivencia de los pasajeros. Para esto se utilizaron las bibliotecas **pandas**, **matplotlib** y **seaborn**, con la finalidad de analizar y comprender cuáles eran las variables más estrechamente relacionadas con la supervivencia.
+
+## Aprendizaje automático
+
+A través de la biblioteca **scikit-learn** se optó, en primera instancia, por utilizar regresión logística. Al comprobar que no era el mejor modelo (los resultados no eran del todo satisfactorios), se decidió utilizar **Random Forest**, por su capacidad de capturar relaciones no lineales entre las variables.
+
+Para mejorar el desempeño del modelo se implementaron las siguientes técnicas:
+
+- **Ingeniería de variables**: extracción del título (Mr., Mrs., Miss, Master) a partir del nombre, cálculo del tamaño familiar (`FamilySize = SibSp + Parch + 1`) y creación de la variable `IsAlone`.
+- **Balanceo de clases**: uso de `class_weight='balanced'` en el Random Forest para compensar el desbalance entre sobrevivientes y no sobrevivientes.
+- **Optimización de hiperparámetros**: búsqueda de los mejores parámetros (`n_estimators`, `max_depth`, `min_samples_leaf`, entre otros) mediante `GridSearchCV`/`RandomizedSearchCV`.
+
+## Conclusión
+
+A pesar de no contar con un conjunto de datos ideal, se logró implementar un algoritmo con hiperparámetros lo suficientemente ajustados como para obtener un aprendizaje adecuado. Los resultados finales del modelo de Random Forest fueron:
+
+| Métrica | Valor |
+|---|---|
+| Exactitud (Accuracy) | 74% |
+| Precisión (Precision) | 50% |
+| Sensibilidad (Recall) | 77% |
+| Puntaje F1 (F1-score) | 61% |
+
+Estos resultados indican que el modelo identifica correctamente a la mayoría de los sobrevivientes reales (alta sensibilidad), aunque a costa de generar cierta cantidad de falsos positivos (precisión más moderada), un comportamiento esperable dado el desbalance de clases presente en el dataset del Titanic.
