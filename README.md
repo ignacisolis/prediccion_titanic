@@ -2,7 +2,7 @@
 
 ## Problemática
 
-Es bien sabido que en el accidente del Titanic las mujeres y los niños eran quienes tenían mayores probabilidades de salvarse. Pero, después de ellos, ¿quiénes le siguen? Este proyecto busca identificar qué otras variables influyeron en la supervivencia de los pasajeros.
+Es bien sabido que en el accidente del Titanic las mujeres y los niños eran quienes tenían mayores probabilidades de salvarse. Pero, después de ellos, ¿quiénes le siguen? Este proyecto busca identificar qué otras variables influyeron en la supervivencia de los pasajeros, además de poder predecir la capacidad de supervivencia según las caracteristicas identificadas.
 
 ## Análisis de datos
 
